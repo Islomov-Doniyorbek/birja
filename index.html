@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Birja</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #259bad;
+        }
+        .wrapper {
+            background: azure;
+            width: 340px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .wrapper header {
+            font-size: 28px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .wrapper form {
+            margin: 40px 0 20px 0;
+        }
+        form :where(input, button, select){
+            width: 100%;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        form p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        form input {
+            height: 50px;
+            font-size: 17px;
+            padding: 0 15px;
+            border: 1px solid navy;
+        }
+        form input:focus {
+            padding: 0 14px;
+            border: 2px solid #259bad;
+        }
+        form .drop-list {
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .drop-list .select-box {
+            display: flex;
+            height: 45px;
+            width: 115px;
+            justify-content: center;
+            align-items: center;
+            /* background: #259bad; */
+            border: 1px solid navy;
+        }
+        .select-box select {
+            width: auto;
+            font-size: 16px;
+            margin: 0 5px 0 5px;
+        }
+        .select-box img {
+            max-width: 25px;
+        }
+        .drop-list .icon {
+            cursor: pointer;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+        form .exchange-rate {
+            font-size: 17px;
+            margin: 20px 0 30px;
+        }
+        form button {
+            height: 52px;
+            font-size: 17px;
+            cursor: pointer;
+            color: azure;
+            background: #259bad;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Birja</header>
+        <form action="#">
+            <div class="amount">
+                <p>Qiymat</p>
+                <input type="text" value="1">
+            </div>
+            <div class="drop-list">
+                <div class="from">
+                    <p>1-valyutadan</p>
+                    <div class="select-box">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="flag">
+                        
+                        <select id="cny">
+                        </select>
+                    </div>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-exchange"></i>
+                </div>
+                <div class="to">
+                    <p>2-valyutaga</p>
+                    <div class="select-box">
+                        <img src="https://flagsapi.com/UZ/flat/64.png" alt="flag">
+                        
+                        <select id="cny">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-rate">Birja</div>
+            <button>
+                <i class="fa fa-refresh"></i>
+            </button>
+        </form>
+    </div>
+
+
+    <script src="./country-list.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
